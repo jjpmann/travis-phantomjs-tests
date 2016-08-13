@@ -1,0 +1,42 @@
+actor: Tester
+paths:
+    tests: tests
+    log: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+settings:
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 1024M
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+        - Codeception\Extension\Phantoman
+        - Codeception\Extension\PhpBuiltinServer
+    config:
+        Codeception\Extension\PhpBuiltinServer:
+            hostname: localhost
+            port: 8888
+            autostart: true
+            documentRoot: public
+            startDelay: 1
+        Codeception\Extension\Phantoman:
+            port: 4444
+            #suites: ['acceptance']
+modules:
+    enabled:
+    config:
+        WebDriver:
+            url: http://localhost:8888
+            browser: phantomjs
+            window_size: 1024x768
+        PhpBrowser:
+            url: http://localhost:8888
+            documentRoot: wwwroot
+            timeout: 30
+        Db:
+            dsn: ''
+            user: ''
+            password: ''
+            dump: tests/_data/dump.sql

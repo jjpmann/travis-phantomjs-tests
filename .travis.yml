@@ -1,0 +1,22 @@
+language: php
+
+php:
+#  - '5.6'
+  - '7.0'
+
+sudo: false
+
+matrix:
+  fast_finish: true
+
+before_install:
+  - git config --global github.accesstoken $GITHUB_TOKEN
+
+install:
+  - composer install --no-interaction --no-progress
+
+before_script:
+  
+
+script:
+  - vendor/bin/codecept run tests/acceptance/PageCest.php -vvv
