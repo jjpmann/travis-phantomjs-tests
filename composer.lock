@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "47790cdedbdfdcfe9bc8377d11f3aa54",
-    "content-hash": "091581465f3936dbe04eb92bb25e38ce",
+    "hash": "e82d581edb8895794b0ceb1cd26cdfe7",
+    "content-hash": "f5178c604501804d76b8600c29352385",
     "packages": [
         {
             "name": "behat/gherkin",
@@ -158,20 +158,20 @@
         },
         {
             "name": "codeception/phpbuiltinserver",
-            "version": "v1.2.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/tiger-seo/PhpBuiltinServer.git",
-                "reference": "53cd8fc4b1134e9e2c1a6d7478490db11160e323"
+                "url": "https://github.com/jjpmann/PhpBuiltinServer.git",
+                "reference": "da81242681577ac84d4f1553c2f5e6312151bcc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tiger-seo/PhpBuiltinServer/zipball/53cd8fc4b1134e9e2c1a6d7478490db11160e323",
-                "reference": "53cd8fc4b1134e9e2c1a6d7478490db11160e323",
+                "url": "https://api.github.com/repos/jjpmann/PhpBuiltinServer/zipball/da81242681577ac84d4f1553c2f5e6312151bcc0",
+                "reference": "da81242681577ac84d4f1553c2f5e6312151bcc0",
                 "shasum": ""
             },
             "require": {
-                "codeception/codeception": "~2.0",
+                "codeception/codeception": ">=2.1.0",
                 "php": ">=5.4.0"
             },
             "type": "library",
@@ -180,7 +180,6 @@
                     "Codeception": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -194,7 +193,10 @@
             "keywords": [
                 "codeception"
             ],
-            "time": "2016-01-14 00:29:41"
+            "support": {
+                "source": "https://github.com/jjpmann/PhpBuiltinServer/tree/issue-31"
+            },
+            "time": "2016-08-13 14:08:21"
         },
         {
             "name": "doctrine/instantiator",
@@ -2244,7 +2246,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "codeception/phpbuiltinserver": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
